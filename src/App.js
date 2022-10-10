@@ -14,10 +14,12 @@ function App() {
       children:[
         {
           path:'/',
+          
           element:<Topics></Topics>
         },
         {
           path:'/Topics',
+          loader:()=>fetch('https://openapi.programming-hero.com/api/quiz'),
           element:<Topics></Topics>
 
         },
@@ -42,4 +44,3 @@ function App() {
 
 export default App;
 
-// loader:()=>fetch('https://openapi.programming-hero.com/api/quiz'),
