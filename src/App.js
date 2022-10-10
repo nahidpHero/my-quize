@@ -5,7 +5,7 @@ import Main from './layouts/Main';
 import Topics from './components/Topics/Topics';
 import Statistics from './components/Statistics/Statistics';
 import Bolg from './components/Blog/Bolg';
-import Errorpage from './components/ErrorPage/Errorpage';
+import Coursedetails from './components/Coursedetails/Coursedetails';
 
 function App() {
   const router=createBrowserRouter([
@@ -20,26 +20,36 @@ function App() {
 
         },
         {
-          path:'/Topics',
+          path:'/topics',
           loader:()=>fetch('https://openapi.programming-hero.com/api/quiz'),
           element:<Topics></Topics>
 
         },
         {
-          path:'/Statistics',
+          path:'/statistics',
           element:<Statistics></Statistics>
         },
         {
-          path:'/Blog',
+          path:'/blog',
           element:<Bolg></Bolg>
+        },
+        {
+          path:'/course/:courseId',
+          loader:async({params})=>{
+            return fetch(`https://openapi.programming-hero.com/api/quiz/${params.courseId}`)
+          },
+          element:<Coursedetails></Coursedetails>
+        },
+        {
+          path:'/topics/course/:courseId',
+          loader:async({params})=>{
+            return fetch(`https://openapi.programming-hero.com/api/quiz/${params.courseId}`)
+          },
+          element:<Coursedetails></Coursedetails>
         }
-      ], 
+      ]
     },
-    {
-      path:'*',
-      element:<Errorpage></Errorpage>
-    }
-
+  
   ])
   return (
     <div className="App">

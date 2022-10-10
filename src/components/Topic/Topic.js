@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Topic = ({topic}) => {
     const {id,name,logo}=topic
@@ -9,7 +10,7 @@ const Topic = ({topic}) => {
        <div className="card-body">
        <h2 className="card-title text-center">{name}</h2>
       <div className="card-actions">
-      <button className="btn btn-primary">Start practice</button>
+      <Link to={`course/${id}`} className="btn btn-primary">Start practice</Link>
     </div>
   </div>
 </div>
