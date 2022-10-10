@@ -5,6 +5,7 @@ import Main from './layouts/Main';
 import Topics from './components/Topics/Topics';
 import Statistics from './components/Statistics/Statistics';
 import Bolg from './components/Blog/Bolg';
+import Errorpage from './components/ErrorPage/Errorpage';
 
 function App() {
   const router=createBrowserRouter([
@@ -32,7 +33,11 @@ function App() {
           path:'/Blog',
           element:<Bolg></Bolg>
         }
-      ]
+      ], 
+    },
+    {
+      path:'*',
+      element:<Errorpage></Errorpage>
     }
 
   ])
