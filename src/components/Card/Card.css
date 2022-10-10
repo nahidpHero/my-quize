@@ -1,0 +1,12 @@
+.question-card{
+    background-color: gray;
+    margin:20px auto ;
+    width: 70%;
+    height: auto;
+    border-radius: 16px;
+    color: aliceblue;
+    padding: 40px;
+}
+.question-text{
+    background-color: darkblue;
+}
