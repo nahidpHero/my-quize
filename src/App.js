@@ -6,8 +6,12 @@ import Topics from './components/Topics/Topics';
 import Statistics from './components/Statistics/Statistics';
 import Bolg from './components/Blog/Bolg';
 import Coursedetails from './components/Coursedetails/Coursedetails';
+import React, { useEffect} from "react"
 
 function App() {
+  useEffect(() => {
+    document.title = "My Quiz";  
+  }, []);
   const router=createBrowserRouter([
     {
       path:'/',

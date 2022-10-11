@@ -1,11 +1,12 @@
 import React from 'react';
+import './Topic.css'
 import { Link } from 'react-router-dom';
 
 const Topic = ({topic}) => {
     const {id,name,logo}=topic
     return (
-        <div>
-          <div className="card w-56 bg-base-100 shadow-xl">
+        <div className='container'>
+        <div className="card w-56 bg-base-100 shadow-xl">
        <figure><img src={logo} alt="logo"/></figure>
        <div className="card-body">
        <h2 className="card-title text-center">{name}</h2>

@@ -1,9 +1,11 @@
 import React from 'react';
+import './Header.css'
+import img1 from '../../images/image.jpg'
 const Header = () => {
     return (
         <div>
-            <div className='text-center text-5xl'>
-                <h1>This is header</h1>
+            <div>
+                <img className='container' src={img1} alt="" />
             </div>
         </div>
     );

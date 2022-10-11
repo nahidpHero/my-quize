@@ -17,7 +17,7 @@ const Statistics = () => {
             <Legend />
             <Bar dataKey="total" fill="#8884d8" />
             </BarChart>
-            </ResponsiveContainer>
+           </ResponsiveContainer>
         </div>
     );
 };
