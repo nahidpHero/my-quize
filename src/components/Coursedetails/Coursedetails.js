@@ -10,6 +10,7 @@ const Coursedetails = () => {
             <h1 className='text-3xl'>Quiz Of {details.data.name}</h1>
             {
                 questions.map(question=><Quies
+                key={question.id}
                 questions={questions}
                 ></Quies>)
             }

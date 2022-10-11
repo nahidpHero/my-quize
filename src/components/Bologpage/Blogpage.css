@@ -1,0 +1,9 @@
+.blog-component-style{
+    background-color: gray;
+    margin:20px auto ;
+    width: 80%;
+    height: auto;
+    border-radius: 16px;
+    color: aliceblue;
+    padding: 40px;
+}
