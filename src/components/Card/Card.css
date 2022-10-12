@@ -1,3 +1,7 @@
+.container{
+    display: flex;
+   
+}
 .question-card{
     background-color: gray;
     margin:20px auto ;
@@ -11,3 +15,10 @@
     background-color: darkblue;
 }
 
+.Summary-section{
+    background-color: cadetblue;
+    color: aliceblue;
+    text-align: center;
+    font-size: medium;
+    margin-right: 20px;
+}

@@ -11,6 +11,8 @@ const Card = ({question}) => {
     const answre=question.correctAnswer
     const options= question.options
 
+
+
     const notify = () => toast("Your answre is correct",{
       position: "top-center",
       autoClose: 5000,
@@ -33,9 +35,11 @@ const Card = ({question}) => {
     const handleToCorretAns=(option)=>{
       if(answre===option){ 
         notify()
+        
       }
       else{
         notify2()
+      
       }
    }
    const showAnswre=(answre)=>{
@@ -57,6 +61,7 @@ const Card = ({question}) => {
                 {
                   <h1 className='text-3xl mt-3 text-black font-semibold '>{ans}{show}</h1>
                 }
+                
                 <ToastContainer></ToastContainer>
             </div>
         </div>

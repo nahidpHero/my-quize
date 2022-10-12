@@ -7,6 +7,9 @@ import Statistics from './components/Statistics/Statistics';
 import Bolg from './components/Blog/Bolg';
 import Coursedetails from './components/Coursedetails/Coursedetails';
 import React, { useEffect} from "react"
+import Errorpage from './components/ErrorPage/Errorpage';
+
+
 
 function App() {
   useEffect(() => {
@@ -16,6 +19,7 @@ function App() {
     {
       path:'/',
       element:<Main></Main>,
+      errorElement:<Errorpage></Errorpage>,
       children:[
         {
           path:'/',
@@ -53,8 +57,9 @@ function App() {
           element:<Coursedetails></Coursedetails>
         }
       ]
+      
     },
-  
+
   ])
   return (
     <div className="App">
